@@ -8,6 +8,10 @@ export default function RootLayout() {
       options={{ headerShown: false }}
     />
     <Stack.Screen
+      name="game"
+      options={{ headerShown: false }}
+    />
+    <Stack.Screen
       name="(tabs)"
       options={{ headerShown: false }}
     />

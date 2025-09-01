@@ -1,6 +1,7 @@
 import { View, Text, Image, ScrollView } from 'react-native'
 import React from 'react'
 import Card from '@/components/Card'
+import { Link } from 'expo-router'
 
 const play = () => {
   return (
@@ -32,7 +33,9 @@ const play = () => {
       <Text className="text-white ml-5 mt-5 font-semibold text-2xl">1v1 Chess Battle:</Text>
       <View className="gap-6">
         <Text className="text-white ml-10 mt-7 font-semibold text-xl">For you</Text>
-        <Card leftTop="WIN" leftBottom="$10" rightTop="Entry Fees" rightBottom="$2" />
+        <Link href='/game'>
+          <Card leftTop="WIN" leftBottom="$10" rightTop="Entry Fees" rightBottom="$2" />
+        </Link>
         <Card leftTop="WIN" leftBottom="$10" rightTop="Entry Fees" rightBottom="$2" />
         <Card leftTop="WIN" leftBottom="$10" rightTop="Entry Fees" rightBottom="$2" />
       </View>

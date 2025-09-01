@@ -1,13 +1,14 @@
 import { View, Image, TextInput, Text, TouchableOpacity, Alert } from 'react-native'
 import React, { useState } from 'react'
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { Link } from 'expo-router';
+import { Link, useRouter } from 'expo-router';
 
 
 const Auth = () => {
 
   const [username, setUsername] = useState<string>("");
   const [password, setPassword] = useState<string>("");
+  const router = useRouter();
 
   const handleLogin = async () => {
     try {
@@ -32,6 +33,7 @@ const Auth = () => {
       }
 
       Alert.alert("Success", "Logged in successfully!");
+      router.push('/play');
 
     } catch (err: any) {
       console.error("Login error:", err);
