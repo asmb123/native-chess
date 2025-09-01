@@ -39,3 +39,6 @@ client/.env*.local
 client/*.tsbuildinfo
 
 client/app-example
+
+server/.env
+server/node_modules
