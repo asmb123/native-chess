@@ -11,7 +11,7 @@ const Auth = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await fetch('http://localhost:3000/login', {
+      const response = await fetch(`${process.env.EXPO_PUBLIC_BACKEND_URL}/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
